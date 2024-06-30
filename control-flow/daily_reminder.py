@@ -1,11 +1,15 @@
+# daily_reminder.py
+
 def get_task_details():
+    # Prompt the user for task details
     task = input("Enter your task: ")
     priority = input("Priority (high/medium/low): ").lower()
     time_bound = input("Is it time-bound? (yes/no): ").lower()
     return task, priority, time_bound
 
 def generate_reminder(task, priority, time_bound):
-    reminder = f"Reminder: '{task}' is a {priority} priority task"
+    # Generate reminder based on priority and time sensitivity
+    reminder = f"'{task}' is a {priority} priority task"
     match priority:
         case 'high':
             reminder += " that requires immediate attention"
@@ -26,7 +30,7 @@ def generate_reminder(task, priority, time_bound):
 def main():
     task, priority, time_bound = get_task_details()
     reminder = generate_reminder(task, priority, time_bound)
-    print(reminder)
+    print(f"Reminder: {reminder}")
 
 if __name__ == "__main__":
     main()
