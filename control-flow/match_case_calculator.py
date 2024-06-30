@@ -1,4 +1,21 @@
-usernumber=int(input("Enter a number to see its multiplication table:"))
-for i in range(1, 10 + 1):
-    product = usernumber * i
-    print(f"{usernumber} * {i} = {product}")
+num1=int(input("Enter the first number:"))
+num2=int(input("Enter the second number:"))
+operation =input("Choose the operation (+, -, *, /):")
+match operation:
+    case "+":
+        result=num1+num2
+        print (f"The result is {result}.")  
+    case "-" :
+        result=num1-num2
+        print (f"The result is {result}.")  
+    case "*" :
+        result=num1*num2
+        print (f"The result is {result}.") 
+    case "/" :
+        if num2 != 0 :
+            result=num1/num2
+            print (f"The result is {result}.") 
+        else:
+            print("Error: Division by zero is not allowed.")
+    case _:
+        print("Invalid operation.")
