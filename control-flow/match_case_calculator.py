@@ -16,6 +16,6 @@ match operation:
             result=num1/num2
             print (f"The result is {result}.") 
         else:
-            print("Error: Division by zero is not allowed.")
+            print("Cannot divide by zero.")
     case _:
         print("Invalid operation.")
