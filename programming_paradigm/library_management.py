@@ -55,6 +55,10 @@ class Library:
         """List all books in the library."""
         return [str(book) for book in self._books]
 
+    def list_available_books(self):
+        """List all available (not checked out) books in the library."""
+        return [str(book) for book in self._books if not book.checked_out]
+
     def check_out_book(self, isbn):
         """Check out a book from the library by its ISBN."""
         book = self.find_book(isbn)
